@@ -19,6 +19,8 @@ export const store = mutation({
             .withIndex("by_token", (q) => q.eq("tokenIdentifier", identity.tokenIdentifier))
             .unique();
 
+
+        //
         if (user !== null) {
             // If we've seen this user before but their name or image has changed, patch them.
             if (user.name !== args.name || user.imageUrl !== args.imageUrl) {
